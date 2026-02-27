@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Valentino Shop</title>
+    </head>
+    <body style="height: auto;">
+        <div class="topnav" style="transform: translateY(-4.5vh);">
+            <a href="home.html">Home</a>
+            <a  class="active" href="shop.html">Valentino's</a>
+            <a href="about.html">About</a>
+            <a id="price" type="submit" href="checkout.html">$0.00</a>
+            <a class="purgatory" href="purgatory.html">Purgatory</a>
+            <a onclick="setPrice(0.00)">Reset items</a>
+        </div>
+        <h1 class="shop-title" style="display: flex; justify-content: center;">Valentino Shop</h1>
+        <div class="shop">
+            <div class="valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Valentino</h4>
+                        <div class="Descriptors">
+                        <p class="valentino-price">$10M</p>
+                        <p class="valentino-desc">This is the original Valentino! He is the best Valentino, and can do (almost) anything!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(10000000.00)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="placeholderValentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Placeholder Valentino</h4>
+                        <div class="Descriptors">
+                        <p class="valentino-price">$99.99</p>
+                        <p class="valentino-desc">Placeholder text</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(99.99)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="rainbowValentinoPack">
+                <div class="Description-box">
+                    <h5 class="valentino-name">Rainbow Valentino Pack</h5>
+                        <div class="Descriptors">
+                        <p class="valentino-price">$999.99</p>
+                        <p class="valentino-desc">All the colors of the rainbow! Perfect crayons! We are not associated with crayons...</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(999.99)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Brainrot-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Brainrot Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$69.67</p>
+                        <p class="valentino-desc">MANGOS MANGOS MANGOS MANGOS MANGOS MANGOS MANGOS MANG...</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(69.67)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Cool-Tino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Cooltino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$1</p>
+                        <p class="valentino-desc">He got sunglasses</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(1)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Rich-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Rich Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$100k</p>
+                        <p class="valentino-desc">He is kinda rich, not as rich as the original though...</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(100000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Sanstino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Sanstino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$7k</p>
+                        <p class="valentino-desc">You feel as if you're gonna have a bad time...</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(7000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Papyrus-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Papyrus Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$10k</p>
+                        <p class="valentino-desc">I, the great Papyrus Valentino, dare you to try, a bite of spaghetti!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(7000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Old-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Old Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$10</p>
+                        <p class="valentino-desc">He has back problems, but good memories. (Veteran)</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(7000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Diamond-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Diamond Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$5M</p>
+                        <p class="valentino-desc">It shimmers and shines. Also, suprisingly strong!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(5000000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Goldentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Goldentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$1M</p>
+                        <p class="valentino-desc">Epic flex. Also, MY EEEYYYYESSSS!!!!!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(1000000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Silver-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Silver Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$500k</p>
+                        <p class="valentino-desc">Absolute garbage. I hate second place...</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(500000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Bronze-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Bronze Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$100k</p>
+                        <p class="valentino-desc">Cheap alternative to Goldentino!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(100000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Spartan-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Spartan Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$300</p>
+                        <p class="valentino-desc">THIS. IS. SPARTAAAAAAAA!!!!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(300)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Spartan-pack">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Spartan Valentino Pack</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$3000</p>
+                        <p class="valentino-desc">300 Spartan Valentino's, for less!</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(3000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Sigma-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Sigma Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$1000</p>
+                        <p class="valentino-desc">*Phonk music*</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(1000)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Chezburbur-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Chezburbur Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$500</p>
+                        <p class="valentino-desc">Can I have chezburbur please?</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(500)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+            <div class="valentino" id="Valentine-Valentino">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Valentine Valentino</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$1k</p>
+                        <p class="valentino-desc">Same thing, tomato tuhmatoe...</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(1000)">
+                    <p>Add to cart</p>
+                </div>
+                <div class="valentino" id="Jerry">
+                <div class="Description-box">
+                    <h4 class="valentino-name">Jerry</h4>
+                    <div class="Descriptors">
+                        <p class="valentino-price">$0</p>
+                        <p class="valentino-desc">Well, that's out of place... (An error made it literally out of place, so i kept it)</p>
+                    </div>
+                </div>
+                <div class="cart-adder" onclick="addItem(0)">
+                    <p>Add to cart</p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<script>
+    function showPrice() {
+        const total = parseFloat(localStorage.getItem("total")) || 0;
+        document.getElementById("checkoutPrice").innerHTML = "$" + total.toLocaleString(undefined, {minimumFractionDigits: 2});
+    }
+
+    document.addEventListener("DOMContentLoaded", showPrice);
+</script>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Checkout</title>
+    </head>
+    <body style="height: auto; display: flex; justify-content: center;" onload="showPrice()">
+        <div class="topnav" style="transform: translateY(-1vh);">
+            <a class="active" href="home.html">Home</a>
+            <a href="shop.html">Valentino's</a>
+            <a href="about.html">About</a>
+            <a class="purgatory" href="purgatory.html">Purgatory</a>
+        </div>
+        <div class="checkout-box" id="checkout-box">
+            <h1>Checkout!</h1>
+            <p>By purchasing a Valentino's © ® ℗ ™ ℠, you agree to the user terms of service and sign a contract that you don't get to read. When you buy, you automatically agree to everything. Enjoy your Valentino's © ® ℗ ™ ℠!</p>
+                <h2 id="checkoutPrice">$0.00</h2>
+            <button class="purchase-button"><a class="e" href="shipping.html">Buy!</a></button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

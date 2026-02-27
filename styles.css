@@ -1,0 +1,325 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 200vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;                 /* Hides scrollbar in Chrome, Safari, Opera */
+}
+
+h1{
+    text-align: center;
+}
+
+.shop-button {
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border: none;
+    height: 7vh;
+    width: 20vw;
+    background-color: #474747;
+    color: white;
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.shop-button::after,
+.shop-button::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-image: conic-gradient(from var(--angle), transparent 60%, #FF6355, #FBA949, #FAE442, #8BD448, #2AA8F2, transparent);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 2%;
+    z-index: -1;
+    animation: 2s spin linear infinite;
+}
+
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#972FDB, #514DDC);
+    height: 100%;
+    width: 100vw;
+    padding-top: 5%;
+    align-items: center;
+}
+
+.container{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    filter: brightness(90%);
+}
+
+.main {
+    text-align: center;
+    padding: 10vw;
+    transform: translateY(-135%);
+}
+
+.video-about {
+    width: 50vh;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  width: 100vw;
+  z-index: 99999;
+  position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+    transition: all 250ms;
+}
+
+.shop-button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    transition: all 250ms;
+  background-image: linear-gradient(#972FDB, #514DDC);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    transition: all 250ms;
+  background-image: linear-gradient(#972FDB, #514DDC);
+  color: white;
+}
+
+.topnav a.active:hover {
+    transition: all 250ms;
+    color: black;
+}
+
+.topnav a.purgatory {
+    float: right;
+}
+
+.Valentino-pic {
+    width: 50vw;
+    transform: translateY(-10%);
+    transform: translateX(25vw);
+    filter: brightness(70%);
+    z-index: -9999
+}
+.footer {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #333;
+    transform: translateY(-95%);
+    height: 100vh;
+}
+.footer .disclaimer {
+    font-size: 0.3rem;
+}
+
+.shop {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 5vh;
+    gap: 1vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.shop-title {
+    font-size: 3rem;
+    transform: translateY(20%);
+}
+
+.valentino {
+    height: 300px;
+    width: 200px;
+    background-color: #333;
+    border-radius: 1rem;
+    background-image: url("Valentino2.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -3rem;
+    margin-top: 3vh;
+}
+
+.Description-box {
+    background-color: #333;
+    height: 36%;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    transform: translateY(181%);
+    padding-left: 5%;
+}
+
+.Descriptors {
+    display: flex;
+    color: grey;
+    gap: 10%;
+    height: 70%;
+    align-items: flex-start;
+    transform: translateY(-20%);
+}
+
+.valentino-desc {
+    font-size: 0.7rem;
+}
+.valentino-price {
+    font-size: 0.5rem;
+    align-self: flex-end;
+}
+
+.cart-adder {
+    opacity: 0%;
+    height: 321px;
+    width: inherit;
+    border-radius: inherit;
+    transform: translateY(-45.5%);
+    text-align: center;
+}
+
+.cart-adder:hover {
+    opacity: 80%;
+    background-image: linear-gradient(purple 75%, transparent);
+}
+
+#placeholderValentino {
+    background-image: url("placeholder-valentino.png");
+}
+
+#rainbowValentinoPack {
+    background-image: url("rainbow-valentino-pack.png");
+}
+
+.checkout-box {
+    padding: 4vh;
+    background-color: #333;
+    transform: translateY(25vh);
+    height: 50vh;
+    width: 50vw;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.purchase-button {
+    border: none;
+    background-color: #444;
+    color: white;
+    width: 10vw;
+    border-radius: 999rem;
+    transition: all 250ms;
+}
+
+.purchase-button:hover {
+    background-color: #555;
+    transition: all 250ms;
+}
+
+.e {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#Brainrot-Valentino {
+    background-image: url("Brainrot-Valentino.png");
+}
+#Cool-Tino {
+    background-image: url("cooltino.png");
+}
+#Rich-Valentino {
+    background-image: url("Rich-Valentino.png");
+}
+#Sanstino {
+    background-image: url("Sans-Tino.png");
+}
+
+#Goldentino {
+    background-image: url("Goldentino.png");
+}
+
+#Papyrus-Valentino {
+    background-image: url("Papyrus-Valentino.png");
+}
+
+#Old-Valentino {
+    background-image: url("Old-Valentino.png");
+}
+
+#Diamond-Valentino {
+    background-image: url("Platinum-Valenino.png");
+}
+
+#Silver-Valentino {
+    background-image: url("silvervalentino.png");
+}
+
+#Bronze-Valentino {
+    background-image: url("bronzevalentino.png");
+}
+
+#Spartan-Valentino {
+    background-image: url("spartan.png");
+}
+
+#Spartan-pack {
+    background-image: url("packspartan.png");
+}
+
+#Sigma-Valentino {
+    background-image: url("sigmavalentino.png");
+}
+
+#Chezburbur-Valentino {
+    background-image: url("chezburbur.png");
+}
+#Valentine-Valentino {
+    background-image: url("Valentine\ Valentino.png");
+}
+#Jerry {
+    background-image: url("Jerry.png");
+}
